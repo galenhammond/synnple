@@ -1,0 +1,66 @@
+<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- header section start -->
+	<header class="header-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-3 logo">
+					<%= image_tag 'synnple', :class => 'logo', :height => '40px', :width => '40px'%>
+					<div class="logo">
+						<h2 class="site-logo">Synnple Visuals</h2>
+					</div>
+				</div>
+				<div class="col-lg-8 col-md-9">
+					<%= link_to 'Get in touch', messages_path, :class => 'site-btn header-btn' %>
+					<nav class="main-menu">
+						<ul>
+							<li><%= link_to 'Home', root_path %></li>
+							<li><a href="about.html">About</a></li>
+							<li><%= link_to 'Work', photos_path %></li>
+							<li><%= link_to 'Contact', messages_path %></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="nav-switch">
+			<a href="mobile.html"><i class="fa fa-bars"></i></a>
+		</div>
+	</header>
+<section class="intro-section">
+		<div class="container text-center">
+			<div class="row">
+
+				<div class="col-xl-10 offset-xl-1">
+					<h2 class="section-title">Check out <span>our portfolio</span> of some of our most recent work</h2>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- intro section end -->
+
+
+	<!-- page section start -->
+	<section class="page-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6 offset-lg-3 contect-tect">
+<%= render @photos %>
+<footer class="footer-section text-center">
+		<div class="container">
+			<h2 class="section-title mb-5">Let’s work together</h2>
+			<%= link_to 'Get in touch', messages_path, :class => 'site-btn' %>
+			<div class="social-links">
+				<a href="https://youtube.com/synnple"><span class="fa fa-youtube"></span></a>
+				<a href="https://instagram.com/synnple"><span class="fa fa-instagram"></span></a>
+				<a href="https://facebook.com/synnple"><span class="fa fa-facebook"></span></a>
+				<a href="https://twitter.com/synnple"><span class="fa fa-twitter"></span></a>
+			</div>
+			<div class="copyright">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made by <a href="https://instagram.com/galenhammond17" target="_blank">Galen Hammond</a>
+
+</div>
+		</div>
+	</footer>

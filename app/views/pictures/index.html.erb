@@ -1,0 +1,156 @@
+<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- header section start -->
+	<header class="header-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-4 col-md-3 logo">
+					<%= image_tag 'synnple', :class => 'logo', :height => '40px', :width => '40px'%>
+					<div class="logo">
+						<h2 class="site-logo">Synnple Visuals</h2>
+					</div>
+				</div>
+				<div class="col-lg-8 col-md-9">
+					<%= link_to 'Get in touch', messages_path, :class => 'site-btn header-btn' %>
+					<nav class="main-menu">
+						<ul>
+							<li><%= link_to 'Home', root_path %></li>
+							<li><a href="about.html">About</a></li>
+							<li><%= link_to 'Work', photos_path %></li>
+							<li><%= link_to 'Contact', messages_path %></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+		<div class="nav-switch">
+			<a href="mobile.html"><i class="fa fa-bars"></i></a>
+		</div>
+	</header>
+	<!-- header section end -->
+
+	<!-- intro section start -->
+	<section class="intro-section">
+	<!--
+		<div class="jumbotron">
+			<%= image_tag 'synnple.png', :height => '105x', :width => '105x' %>
+		</div>
+	-->	
+		<div class="container text-center">
+			<div class="jumboborder">
+			<div class="row">
+				<div class="col-xl-10 offset-xl-1">
+					<h2 class="section-title">Helping businesses <span>develop and connect</span>, one step at a time.</h2>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+	<!-- intro section end -->
+
+
+	<!-- portfolio section start -->
+	<section class="portfolio-section">
+		<div class="container">
+			<ul class="portfolio-filter controls">
+				<li class="control" data-filter="all">All</li>
+				<li class="control" data-filter=".web">Graphics</li>
+				<li class="control" data-filter=".digital">Videos</li>
+				<li class="control" data-filter=".rened">Logos</li>
+				<li class="control" data-filter=".brand">Cover Art</li>
+			</ul>
+		</div>                       
+		<div class="container-fluid p-md-0 ">
+			<div class="row portfolios-area">
+				<div class="mix col-lg-6 col-md-6 web">
+					<a href="logos/3.jpg" class="portfolio-item set-bg" data-setbg="logos/3.jpg">
+						<%= image_tag "Correct Life Investment Logo 2.png"%>
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-6 col-md-6 digital">
+					<a href="/assets/2.jpg" class="portfolio-item set-bg" data-setbg="">
+						<%= image_tag 'RJ.png' %>
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-4 col-md-6 web">
+					<a href="img/portfolio/3.jpg" class="portfolio-item set-bg" data-setbg="img/portfolio/3.jpg">
+						<%= image_tag 'Ironman 6_00000.png' %>
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-4 col-md-6 digital">
+					<a href="img/portfolio/4.jpg" class="portfolio-item set-bg" data-setbg="img/portfolio/4.jpg">
+						<%= image_tag 'NN.png' %>
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-4 col-md-6 rened">
+					<a href="img/portfolio/5.jpg" class="portfolio-item set-bg" data-setbg="img/portfolio/5.jpg">
+						<%= image_tag 'logo_00000_00000' %>
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<!--
+				<div class="mix col-lg-12 col-md-6 brand">
+					<a href="" class="portfolio-item set-bg" data-setbg="">
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+							<%= image_tag 'Brandon Bentzier_00000',  :class => 'jumbofill', :height => '700px', :width => '1000px' %>
+						</div>						
+					</a>
+				</div>
+			-->
+				<div class="mix col-lg-6 col-md-6 rened">
+					<a href="img/portfolio/7.jpg" class="portfolio-item set-bg" data-setbg="img/portfolio/7.jpg">
+						<%= image_tag 'RJ2' %>
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+				<div class="mix col-lg-6 col-md-6 brand">
+					<a href="img/portfolio/8.jpg" class="portfolio-item set-bg" data-setbg="img/portfolio/8.jpg">
+						<%= image_tag 'Brain_00000' %>
+						<div class="pi-inner">
+							<h2>+ See Project</h2>
+						</div>						
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- portfolio section end -->
+	<p class="footer-sect">We specialize in graphics design. We do everything from logos to revamps and more! Our work can be described as fast and reliable. We like to ensure the best quality possible for every piece of work we do. For a better understanding visit our portfolio above. To order a design use the contact form below!</p>
+
+	<!-- footer section start -->
+	<footer class="footer-section text-center">
+		<div class="container">
+			<h2 class="section-title mb-5">Let’s work together</h2>
+			<%= link_to 'Get in touch', messages_path, :class => 'site-btn' %>
+			<div class="social-links">
+				<a href="https://youtube.com/synnple"><span class="fa fa-youtube"></span></a>
+				<a href="https://instagram.com/synnple"><span class="fa fa-instagram"></span></a>
+				<a href="https://facebook.com/synnple"><span class="fa fa-facebook"></span></a>
+				<a href="https://twitter.com/synnple"><span class="fa fa-twitter"></span></a>
+			</div>
+			<div class="copyright">
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made by <a href="https://instagram.com/galenhammond17" target="_blank">Galen Hammond</a>
+
+</div>
+		</div>
+	</footer>

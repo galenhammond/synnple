@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<%= csrf_meta_tags %>
+    <title>Synnple</title>
+    <meta charset="UTF-8">
+	<meta name="description" content="Riddle - Portfolio Template">
+	<meta name="keywords" content="portfolio, riddle, onepage, creative, html">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Favicon -->
+	<link href="/assets/favicon_1.ico" rel="shortcut icon"/>
+	
+	<!-- FontAwesome -->
+	<!--
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+-->
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,400i,600,600i,700" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<!--
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="css/magnific-popup.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
+	-->
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+	
+
+    <!-- JS -->
+    <!--
+    <script src="js/jquery-2.1.4.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/mixitup.min.js"></script>
+	<script src="js/magnific-popup.min.js"></script>
+	<script src="js/main.js"></script>
+-->
+  </head>
+
+  <body>
+	  <% if notice %>
+	  	<p class="alert alert-success"><%= notice %></p>
+		<% end %>
+		<% if alert %>
+	 	<p class="alert alert-danger"><%= alert %></p>
+	  <% end %>
+    <%= yield %>
+    <div class="footer-sect">
+    <p class="navbar-text">
+<% if user_signed_in? %>
+  Logged in as <strong>Admin</strong>.
+ <!-- <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> | -->
+  <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <!-- <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> | -->
+  <%= link_to "Admin Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
+<% if user_signed_in? %>
+	<%= link_to 'Upload', new_photo_path, class: 'btn pull-right navbar-text' %>
+<% else %>
+<% end %>
+</p>
+</div>
+  </body>
+</html>
