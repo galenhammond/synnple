@@ -8,13 +8,13 @@ def create
 
     @message = Message.new(message_params)
 
-    data = params[:body]
-    usr_name = params[:name]
-    return_email = params[:email]
-    phone_num = params[:phone_number]
+    @data = message_params[:body]
+    @usr_name = message_params[:name]
+    @return_email = message_params[:email]
+    @phone_num = message_params[:phone_number]
 
 	if verify_recaptcha(model: @message) && @message.valid?
-      ContactMailer.contact_request(data, usr_name, phone_num, return_email).deliver_now
+      ContactMailer.contact_request(@data, @usr_name, @phone_num, @return_email).deliver_now
       redirect_to root_path
       flash[:notice] = "We have received your message and will be in touch soon!"
     else

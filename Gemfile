@@ -46,6 +46,8 @@ gem 'mail_form'
 #AUTHENTICATIION
 
 gem 'devise'
+#awesome-print
+gem "awesome_print", require:"ap"
 gem 'dotenv-rails', groups: [:development, :test]
 # for SMTP requests
 gem "figaro"
