@@ -39,7 +39,7 @@ Rails.application.configure do
     :password             => ENV['gmail_password'],
     :authentication       => "plain",
     :enable_starttls_auto => true
-   # }
+    }
 
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
