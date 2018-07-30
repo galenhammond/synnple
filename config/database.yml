@@ -31,4 +31,4 @@ production:
   <<: *default
   database: bridget_production
   username: postgres
-  password: password
+  password: <% ENV["BRIDGET_PASSWORD"] %>
