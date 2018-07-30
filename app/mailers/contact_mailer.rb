@@ -14,7 +14,7 @@ class ContactMailer < ApplicationMailer
     @email = return_email
     @main_email = 'galenhammond@live.ca'
 
-    mail(to: 'galenhammond@live.ca', subject: 'Contact Request')
+    mail(to: 'synnplevisuals@gmail.com', subject: 'Contact Request')
     #, :subject "Contact Request", :from => @message.email
   end
 end
